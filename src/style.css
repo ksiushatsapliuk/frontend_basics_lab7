@@ -1,0 +1,97 @@
+body {
+  margin: 8px;
+  color: #000;
+  background: #fff;
+  font-family: "Times New Roman", serif;
+  font-size: 16px;
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
+[role="button"]:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+.birth-colored {
+  color: #fff;
+  background-color: green;
+}
+
+.education-colored {
+  color: #fff;
+  background-color: blue;
+}
+
+.city-image {
+  display: block;
+  height: auto;
+}
+
+#image-container > img,
+#image-container > a:not(:first-child) {
+  margin-top: 10px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 15px;
+}
+
+button {
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.goods-section {
+  margin-top: 32px;
+}
+
+.goods-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 180px);
+  gap: 20px 16px;
+}
+
+.goods-card img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.goods-card h3 {
+  margin: 12px 0 16px;
+  color: #31c1ef;
+  text-align: center;
+  font-size: 16px;
+}
+
+.goods-card h3::before {
+  display: inline-block;
+  width: 5px;
+  height: 14px;
+  margin-right: 8px;
+  background: #31c1ef;
+  content: "";
+}
+
+.goods-card p {
+  margin: 0 0 8px;
+}
+
+@media (max-width: 400px) {
+  .goods-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 8px;
+  }
+
+  .goods-card img {
+    max-width: 100%;
+  }
+}
